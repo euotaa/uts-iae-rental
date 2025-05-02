@@ -1,0 +1,1633 @@
+{
+	"info": {
+		"_postman_id": "402357b4-3583-4bf2-87f7-8e06d6b65ce0",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44255534",
+		"_collection_link": "https://www.postman.com/tim-keren/workspace/uts/collection/44255534-402357b4-3583-4bf2-87f7-8e06d6b65ce0?action=share&source=collection_link&creator=44255534"
+	},
+	"item": [
+		{
+			"name": "Users Service",
+			"item": [
+				{
+					"name": "Update Customer by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vemakan\",\r\n    \"phone\":\"123459\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/customers/15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"15"
+							]
+						},
+						"description": "Endpoint untuk mengupdate data customer"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"vena@gmail.com\",\r\n    \"phone\":\"12345987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/customers/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:49:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Customer berhasil diupdate\",\n    \"data\": {\n        \"id\": 11,\n        \"name\": \"ignatius\",\n        \"email\": \"vena@gmail.com\",\n        \"address\": \"solo\",\n        \"phone\": \"12345987\",\n        \"created_at\": \"2025-04-30T18:30:22.000000Z\",\n        \"updated_at\": \"2025-04-30T18:49:03.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"vemakan\",\r\n    \"phone\":\"123459\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/customers/15",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:55:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Data Customer tidak ditemukan\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "List Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Endpoint untuk mendapatkan semua Data Customer"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:07:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer List\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Prof. Micheal Yost\",\n            \"email\": \"wfranecki@example.org\",\n            \"address\": \"15575 Heller Square Apt. 481\\nEast Lukasland, NV 09380\",\n            \"phone\": \"+1.631.351.8061\",\n            \"created_at\": \"2025-04-30T17:41:13.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:13.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Dr. Griffin Mante\",\n            \"email\": \"hromaguera@example.net\",\n            \"address\": \"53891 Sydnie Lights\\nLake Ivahmouth, KS 70073\",\n            \"phone\": \"(614) 792-0653\",\n            \"created_at\": \"2025-04-30T17:41:13.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:13.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Nikki Weimann\",\n            \"email\": \"cremin.rosalind@example.com\",\n            \"address\": \"9006 Bechtelar Burgs Apt. 465\\nDeloresshire, WA 90632-0927\",\n            \"phone\": \"+1-720-707-0094\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Alverta Schiller\",\n            \"email\": \"qwuckert@example.org\",\n            \"address\": \"27833 Sauer Springs\\nJackieport, AL 97928-7821\",\n            \"phone\": \"938-873-1057\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Nelda Hills\",\n            \"email\": \"lspencer@example.org\",\n            \"address\": \"6022 Carroll Streets\\nNew Jacinthehaven, OH 59215\",\n            \"phone\": \"830.715.6997\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Cayla Lubowitz\",\n            \"email\": \"schaefer.leland@example.net\",\n            \"address\": \"18873 Georgette Ways\\nBergeside, MI 19904\",\n            \"phone\": \"1-815-616-8021\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Mrs. Jakayla Jacobi\",\n            \"email\": \"cody.kiehn@example.org\",\n            \"address\": \"291 Senger Fords Suite 520\\nParisianland, NH 59273-6306\",\n            \"phone\": \"+14047731205\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Gerhard Welch\",\n            \"email\": \"brendon19@example.org\",\n            \"address\": \"31311 Casper Parkways Apt. 704\\nNew Everettbury, KS 76958-4352\",\n            \"phone\": \"870-569-0802\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Miss Abagail Veum IV\",\n            \"email\": \"adams.heloise@example.net\",\n            \"address\": \"1671 Emmerich Creek\\nPort Marianeview, LA 54738\",\n            \"phone\": \"+1.515.574.0676\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Angelo Wunsch\",\n            \"email\": \"vida.parisian@example.com\",\n            \"address\": \"8870 Blanche Light\\nEast Alexandre, DE 37152\",\n            \"phone\": \"(202) 644-7892\",\n            \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n            \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ignatius\",\r\n    \"email\": \"ign1234@yahoo.com\",\r\n    \"address\": \"solo\",\r\n    \"phone\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Endpoint untuk menambahkan data customer"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"ignatius\",\r\n    \"email\": \"ign1234@yahoo.com\",\r\n    \"address\": \"solo\",\r\n    \"phone\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/customers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:30:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Customer Berhasil Ditambahkan\",\n    \"data\": {\n        \"name\": \"ignatius\",\n        \"email\": \"ign1234@yahoo.com\",\n        \"address\": \"solo\",\n        \"phone\": \"12345678\",\n        \"updated_at\": \"2025-04-30T18:30:22.000000Z\",\n        \"created_at\": \"2025-04-30T18:30:22.000000Z\",\n        \"id\": 11\n    }\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"ign\",\r\n    \"email\": \"ignmakan\",\r\n    \"address\": \"solo\",\r\n    \"phone\": \"12345makan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/customers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:32:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"email\": [\n            \"The email field must be a valid email address.\"\n        ]\n    },\n    \"message\": \"gagal\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customers/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"8"
+							]
+						},
+						"description": "Endpoint untuk mencari data customer berdasarkan ID"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customers/8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:37:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Customer Ditemukan\",\n    \"data\": {\n        \"id\": 8,\n        \"name\": \"Gerhard Welch\",\n        \"email\": \"brendon19@example.org\",\n        \"address\": \"31311 Casper Parkways Apt. 704\\nNew Everettbury, KS 76958-4352\",\n        \"phone\": \"870-569-0802\",\n        \"created_at\": \"2025-04-30T17:41:15.000000Z\",\n        \"updated_at\": \"2025-04-30T17:41:15.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customers/15",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 18:39:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Data Customer tidak ditemukan\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Customer by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"description": "Endpoint untuk menghapus data customer"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customers/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 19:01:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Data Customer berhasil dihapus\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/customers/90",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"customers",
+										"90"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8001"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 19:02:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Data Customer tidak ditemukan\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			],
+			"description": "User service ini berisi endpoint tentang layanan yang dilakukan pada customer"
+		},
+		{
+			"name": "Devices Service",
+			"item": [
+				{
+					"name": "List Device",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url2}}/api/devices",
+							"host": [
+								"{{base_url2}}"
+							],
+							"path": [
+								"api",
+								"devices"
+							]
+						},
+						"description": "endpoint untuk menampilkan semua device yang ada"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url2}}/api/devices",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:01:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Device List\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"molestias Lite\",\n            \"price\": 24986110,\n            \"type\": \"Analog Camera\",\n            \"duration\": 11,\n            \"created_at\": \"2025-05-01T05:36:17.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:17.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"non Max\",\n            \"price\": 26608680,\n            \"type\": \"Analog Camera\",\n            \"duration\": 1,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"exercitationem Lite\",\n            \"price\": 21001583,\n            \"type\": \"Iphone\",\n            \"duration\": 24,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"velit Mini\",\n            \"price\": 17880479,\n            \"type\": \"Digital Camera\",\n            \"duration\": 5,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"aut Mini\",\n            \"price\": 22393360,\n            \"type\": \"Digital Camera\",\n            \"duration\": 22,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"corrupti Pro\",\n            \"price\": 3058535,\n            \"type\": \"MacBook\",\n            \"duration\": 22,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"rem Max\",\n            \"price\": 14720603,\n            \"type\": \"Analog Camera\",\n            \"duration\": 10,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"sint Pro\",\n            \"price\": 27200484,\n            \"type\": \"Analog Camera\",\n            \"duration\": 25,\n            \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"enim Lite\",\n            \"price\": 8611814,\n            \"type\": \"Iphone\",\n            \"duration\": 21,\n            \"created_at\": \"2025-05-01T05:36:19.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:19.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"quos Pro\",\n            \"price\": 7424074,\n            \"type\": \"Iphone\",\n            \"duration\": 23,\n            \"created_at\": \"2025-05-01T05:36:19.000000Z\",\n            \"updated_at\": \"2025-05-01T05:36:19.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Iphone 13 Pro\",\r\n    \"price\": \"1000000\",\r\n    \"type\": \"Iphone\",\r\n    \"duration\": \"30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url2}}/api/devices",
+							"host": [
+								"{{base_url2}}"
+							],
+							"path": [
+								"api",
+								"devices"
+							]
+						},
+						"description": "Endpoint untuk menambahkan data device baru"
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Iphone 13 Pro\",\r\n    \"price\": \"300000\",\r\n    \"type\": \"Iphone\",\r\n    \"duration\": \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url2}}/api/devices",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:08:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"price\": [\n            \"The price field must be at least 1000000.\"\n        ]\n    },\n    \"message\": \"Validasi gagal\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Iphone 13 Pro\",\r\n    \"price\": \"1000000\",\r\n    \"type\": \"Iphone\",\r\n    \"duration\": \"30\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url2}}/api/devices",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:09:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Device berhasil ditambahkan\",\n    \"data\": {\n        \"name\": \"Iphone 13 Pro\",\n        \"price\": \"1000000\",\n        \"type\": \"Iphone\",\n        \"duration\": 12,\n        \"updated_at\": \"2025-05-01T06:09:35.000000Z\",\n        \"created_at\": \"2025-05-01T06:09:35.000000Z\",\n        \"id\": 11\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get device by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url2}}/api/devices/90",
+							"host": [
+								"{{base_url2}}"
+							],
+							"path": [
+								"api",
+								"devices",
+								"90"
+							]
+						},
+						"description": "Endpoint untuk mencari data device berdasarkan ID"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url2}}/api/devices/2",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:24:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Device ditemukan\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"non Max\",\n        \"price\": 26608680,\n        \"type\": \"Analog Camera\",\n        \"duration\": 1,\n        \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n        \"updated_at\": \"2025-05-01T05:36:18.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url2}}/api/devices/90",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices",
+										"90"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:25:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Device tidak ditemukan\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Device by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"price\": \"7000000\",\r\n     \"duration\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url2}}/api/devices/6",
+							"host": [
+								"{{base_url2}}"
+							],
+							"path": [
+								"api",
+								"devices",
+								"6"
+							]
+						},
+						"description": "Endpoint untuk memperbarui data device"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"price\": \"7000000\",\r\n     \"duration\": \"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url2}}/api/devices/6",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:29:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Device berhasil diupdate\",\n    \"data\": {\n        \"id\": 6,\n        \"name\": \"corrupti Pro\",\n        \"price\": \"7000000\",\n        \"type\": \"MacBook\",\n        \"duration\": \"10\",\n        \"created_at\": \"2025-05-01T05:36:18.000000Z\",\n        \"updated_at\": \"2025-05-01T06:29:03.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"price\": \"7000\",\r\n     \"duration\": \"10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url2}}/api/devices/98",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices",
+										"98"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:32:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Device tidak ditemukan\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Device by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url2}}/api/devices/3",
+							"host": [
+								"{{base_url2}}"
+							],
+							"path": [
+								"api",
+								"devices",
+								"3"
+							]
+						},
+						"description": "Endpoint untuk menghapus data device dengan ID"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url2}}/api/devices/3",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:34:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Device berhasil dihapus\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url2}}/api/devices/99",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"devices",
+										"99"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 06:35:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"message\": \"Device tidak ditemukan\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Rekomendasi AI",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url2}}/api/ai",
+							"host": [
+								"{{base_url2}}"
+							],
+							"path": [
+								"api",
+								"ai"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bugdet\": 7000,\r\n    \"type\": \"Analog Camera\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url2}}/api/ai",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"ai"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 07:07:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"budget\": [\n            \"The budget field is required.\"\n        ]\n    },\n    \"message\": \"Validasi gagal\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"budget\": 15000000,\r\n    \"type\": \"Iphone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url2}}/api/ai",
+									"host": [
+										"{{base_url2}}"
+									],
+									"path": [
+										"api",
+										"ai"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 May 2025 07:20:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Device rekomendasi ditemukan.\",\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"quos Pro\",\n        \"price\": 7424074,\n        \"type\": \"Iphone\",\n        \"duration\": 23,\n        \"created_at\": \"2025-05-01T05:36:19.000000Z\",\n        \"updated_at\": \"2025-05-01T05:36:19.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rentals Device",
+			"item": [
+				{
+					"name": "Create new rental",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 7,\r\n    \"device_id\": 3,\r\n    \"start_date\":\"2025-04-19\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url3}}/api/rental",
+							"host": [
+								"{{base-url3}}"
+							],
+							"path": [
+								"api",
+								"rental"
+							]
+						},
+						"description": "menambahkan rentalan baru"
+					},
+					"response": []
+				},
+				{
+					"name": "Get rental",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url3}}/api/rental",
+							"host": [
+								"{{base-url3}}"
+							],
+							"path": [
+								"api",
+								"rental"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get rental by ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
