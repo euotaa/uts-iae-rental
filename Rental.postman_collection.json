@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "4d9e3085-d1ab-440a-a890-c1832bb17b5c",
+		"name": "Rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44255534",
+		"_collection_link": "https://www.postman.com/tim-keren/workspace/uts/collection/44255534-4d9e3085-d1ab-440a-a890-c1832bb17b5c?action=share&source=collection_link&creator=44255534"
+	},
+	"item": [
+		{
+			"name": "Rentals Device",
+			"item": [
+				{
+					"name": "Create new rental",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 7,\r\n    \"device_id\": 3,\r\n    \"start_date\":\"2025-04-19\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-url3}}/api/rental",
+							"host": [
+								"{{base-url3}}"
+							],
+							"path": [
+								"api",
+								"rental"
+							]
+						},
+						"description": "menambahkan rentalan baru"
+					},
+					"response": []
+				},
+				{
+					"name": "Get rental",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url3}}/api/rental",
+							"host": [
+								"{{base-url3}}"
+							],
+							"path": [
+								"api",
+								"rental"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get rental by ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
